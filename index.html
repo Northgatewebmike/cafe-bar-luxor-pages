@@ -178,13 +178,13 @@ Error generating stack: `+l.message+`
 
     <div id="root"></div>
     <!-- jQuery (required by dFlip) -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="/cafe-bar-luxor-pages/media/jquery-3.7.1.min.js"></script>
     <!-- Three.js (required by dFlip for WebGL 3D) -->
     <script src="/cafe-bar-luxor-pages/media/three.min_98c01b76.js"></script>
     <!-- PDF.js (required by dFlip for PDF mode) -->
     <script src="/cafe-bar-luxor-pages/media/pdf.min_b18585e0.js"></script>
     <!-- dFlip main library -->
-    <script src="/cafe-bar-luxor-pages/media/dflip.min_33fd7677.js"></script>
+    <script>if (window.pdfjsLib?.GlobalWorkerOptions) window.pdfjsLib.GlobalWorkerOptions.workerSrc = "/cafe-bar-luxor-pages/media/pdf.worker.min.js";</script><script src="/cafe-bar-luxor-pages/media/dflip.min_33fd7677.js"></script>
     <!-- Umami analytics loaded conditionally after cookie consent via CookieBanner.tsx -->
   </body>
 </html>
