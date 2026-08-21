@@ -118,8 +118,7 @@
     var path = window.location.pathname;
     if (path.indexOf(base + "/") !== 0) return;
     var target = path.slice(base.length) + window.location.search + window.location.hash;
-    window.sessionStorage.setItem("luxor-pages-deep-link", target || "/");
-    window.location.replace(base + "/");
+    window.location.replace(base + "/?luxor-route=" + encodeURIComponent(target || "/"));
   })();
 </script></head>
 

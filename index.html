@@ -114,10 +114,11 @@
     <link rel="stylesheet" crossorigin href="/cafe-bar-luxor-pages/assets/index-DGH9Vo0P.css">
   <script>
   (function () {
-    var target = window.sessionStorage.getItem("luxor-pages-deep-link");
+    var base = "/cafe-bar-luxor-pages";
+    var params = new URLSearchParams(window.location.search);
+    var target = params.get("luxor-route");
     if (!target) return;
-    window.sessionStorage.removeItem("luxor-pages-deep-link");
-    window.history.replaceState(null, "", target);
+    window.history.replaceState(null, "", base + target);
   })();
 </script></head>
 
